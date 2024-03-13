@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+:root{
+    --main-color: #49C5B6;
+
+}
+*{
+    font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+::-webkit-scrollbar{
+    width: .5rem;
+    height: .5rem;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: whitesmoke;
+}
+section{
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+#menuBtn{
+    display: none;
+}
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background-color: #49c5b756;
+    box-shadow: 0,0,0,.2rem;
+    z-index: 1000;
+}
+.header .logo-section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.header .logo-section .navbar a{
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+}
+.header .logo-section .navbar a:hover{
+    background-color: #49c5b732;
+    font-weight: 100;
+}
+
+
+/*media queries*/
