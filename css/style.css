@@ -125,6 +125,18 @@ section{
     border: #49c5b755 solid;
     border-radius: .5rem;
     padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+.category .cat-container .box h3{
+    font-size: 1.9rem;
+}
+.category .cat-container .box span{
+    font-size: 1.5rem;
+}
+.category .cat-container .box:hover{
+    background-color: #49c5b723;
+    transition: 5ms;
 }
 
 
@@ -185,6 +197,10 @@ section{
    
     .header .logo-section .navbar .active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .category .cat-container{
+        display: grid;
+        grid-template-columns: 1fr;
     }
     .footer .grid{
         display: grid;
