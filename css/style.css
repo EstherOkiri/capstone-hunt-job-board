@@ -62,6 +62,59 @@ section{
     background-color: #49c5b732;
     font-weight: 100;
 }
+.hero-container{
+    background: url(/images/home-bg-image.jpg),rgba(0,0,0,.7) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+      
+}
+.hero-container .home{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-container .home form{
+    background-color: whitesmoke;
+    width: 50rem;
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.hero-container .home form h3{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+.hero-container .home form p{
+    text-align: left;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+}
+.hero-container .home form .input{
+    width: 100%;
+    border-radius: .5rem;
+    margin: 1rem 0;
+    background-color: whitesmoke;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    color: black;
+}
+.hero-container .home form .btn{
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.hero-container .home form .btn:hover{
+    background-color: #49C5B6;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
 /*footer*/
 .footer .grid{
     display: flex;
