@@ -65,3 +65,26 @@ section{
 
 
 /*media queries*/
+@media (max-width:991px){/*tablet*/
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width:768px){/*tablet*/
+    #menuBtn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+    }
+    .header .logo-section .navbar a{
+        display: block;
+        padding: 1.5rem;
+    }
+}
+@media (max-width:480px){/*tablet*/
+    html{
+        font-size: 45%;
+    }
+}
