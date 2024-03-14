@@ -108,7 +108,24 @@ section{
     cursor: pointer;
 
 }
-
+/*category section*/
+.heading{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 3.5rem;
+}
+.category .cat-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: flex-start ;
+    gap: 1.5rem
+}
+.category .cat-container .box{
+    border: #49c5b755 solid;
+    border-radius: .5rem;
+    padding: 2rem;
+}
 
 
 
