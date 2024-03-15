@@ -138,6 +138,60 @@ section{
     background-color: #49c5b723;
     transition: 5ms;
 }
+/*latest jobs*/
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.jobs-container .box-container .box{
+    border-radius: .5rem;
+    border: #49C5B6 solid;
+    padding: 2rem;
+}
+.jobs-container .box-container .box .company{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.jobs-container .box-container .box .company img{
+    height: 7rem;
+    width: 6rem;
+    margin-bottom: 1.5rem;
+}
+.jobs-container .box-container .box .company h3{
+    font-size: 1.8rem;
+
+}
+.jobs-container .box-container .box .company p{
+    font-size: 1.6rem;
+}
+.jobs-container .box-container .box .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.flex-btn{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+}
+.flex-btn a{
+    font-size: 1.5rem;
+}
+.flex-btn button{
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+.flex-btn button:hover{
+    background-color: #49c5b723;
+}
+
 
 
 
