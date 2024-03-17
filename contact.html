@@ -22,6 +22,51 @@
         </section>
 
     </header>
+    <!--contact section-->
+    <div class="section-title">Contact Us</div>
+    <section class="contact">
+        <div class="box-container">
+            <div class="box">
+                <img src="/images/location.png" alt="location">
+                <a href="#">Nairobi, Kenya</a>
+            </div>
+            <div class="box">
+                <img src="/images/telephone.png" alt="telephone">
+                <a href="tel: 123 456 789">+123 456 789</a>
+            </div>
+            <div class="box">
+                <img src="/images/email.png" alt="email">
+                <a href="mailto:abcdefg23@gmail.com">abcdefg23@gmail.com</a>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div class="flex">
+                <div class="box">
+                    <p>Name <span>*</span></p>
+                    <input type="text" name="name" class="input" required placeholder="Type your name">
+                </div>
+                <div class="box">
+                    <p>E-Mail <span>*</span></p>
+                    <input type="email" name="email" class="input" required placeholder="Type your email">
+                </div>
+                <div class="box">
+                    <p>Mobile Number: <span>*</span></p>
+                    <input type="num" name="mobile number" class="input" required placeholder="07XX XXX XXX">
+                </div>
+                <div class="box">
+                    <p>Role <span>*</span></p>
+                    <select name="role" class="input">
+                        <option value="Employer">Employer</option>
+                        <option value="job seeker">Job Seeker</option>
+                    </select>
+                </div>
+            </div>
+            <p>Message or Question <span>*</span></p>
+            <textarea name="message" class ="input" required placeholder="Type your message or question here..." cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" name="send">
+        </form>
+
+    </section>
   
 
     <!--footer section-->
