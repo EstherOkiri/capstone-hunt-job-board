@@ -343,9 +343,47 @@ section{
 }
 .contact form textarea{
     height: 15rem;
-    
 }
-
+/*login.html*/
+.account-form-container{
+    background: url(/images/account-bg-image.jpg),rgba(0,0,0,.7) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.account-form-container .account-form{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account-form-container .account-form form{
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+}
+.account-form-container .account-form form h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.account-form-container .account-form form .input{
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    padding: 1.4rem;
+    border-radius: .5rem;
+}
+.account-form-container .account-form form p{
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+.account-form-container .account-form form p a{
+    color: #49C5B6;
+}
+.account-form-container .account-form form p a:hover{
+    color: #49c5b755;
+    text-decoration: underline;
+}
 
 
 
