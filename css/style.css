@@ -63,7 +63,7 @@ section{
     font-weight: 100;
 }
 .hero-container{
-    background: url(/images/home-bg-image.jpg),rgba(0,0,0,.7) no-repeat;
+    background: url(./images/home-bg-image.jpg),rgba(0,0,0,.7) no-repeat;
     background-size: cover;
     background-position: bottom;
       
