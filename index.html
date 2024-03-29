@@ -25,13 +25,13 @@
     <!--hero section-->
     <div class="hero-container">
         <section class="home">
-            <form action="" method="post">
+            <form action="./viewjob.html" method="post">
                 <h3>Find your next job</h3>
                 <p>Job Title</p>
-                <input type="text" class="input" name="title" placeholder="job title, industry, company" id="searchinput">
+                <input type="text" class="input" name="title" placeholder="job title" id="searchinput">
                 <p>Job Location</p>
                 <input type="text" class="input" name="location" placeholder="town or county" >
-                <input type="submit" value="Search Job" class="btn">
+                <input type="submit" value="Search Job" class="btn" id="search-job-button">
             </form>
 
         </section>       
@@ -89,6 +89,12 @@
     <!--job section-->
     <h1 class="heading">Latest Jobs</h1>
     <section class="jobs-container">
+        <template data-job-template>
+            <div class="box-container">
+                <h3 class="job-title" job-header></h3>
+                <p class="location" job-body></p>
+            </div>
+        </template>
         
         <div class="box-container">
             <div class="box">
@@ -99,7 +105,7 @@
                         <span>2 days ago</span>
                     </div>
                 </div>
-                <h3 class="job-title">Senior Web Developer</h3>
+                <h3 class="job-title" >Senior Web Developer</h3>
                 <p class="location"><span>Mombasa, Kenya</span></p>
                 <div class="tags">
                     <p><span>10k - 25k </span></p>

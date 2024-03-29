@@ -7,6 +7,7 @@
     <title>Log In</title>
 </head>
 <body>
+    <script src="https://accounts.google.com/gsi/client"></script>
     <!--header section-->
     <header class="header">
         <section class=logo-section>
@@ -32,6 +33,11 @@
                 <input type="password" required class="input" name="name" placeholder="Type Your Password">
                 <input type="submit" value="Log in" name="submit" class="btn">
                 <p>Don't have an account ? <a href="./signUp.html">Sign Up</a></p>
+                <div id="g_id_onload"
+                    data-client_id="155339058051-jq93qpq8qel833d6jvojrkqgi504la05.apps.googleusercontent.com"
+                    data-callback="handleCredentialResponse">
+                </div>
+                <div class="g_id_signin" data-type="standard"></div>
 
 
 
@@ -68,7 +74,7 @@
     </footer>
     
 
-    <script src="/js/script.js"></script>
+    <!-- <script src="/js/script.js"></script> -->
     
 </body>
 </html>
