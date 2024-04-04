@@ -6,7 +6,9 @@ var jobs = [
     location: 'Mombasa',
     country: 'Kenta',
     type: 'Full Time',
-    salary: 250000
+    salary: 250000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    
   },
   {
     jobId: 2,
@@ -14,7 +16,8 @@ var jobs = [
     location: 'Nairobi',
     country:'Kenya',
     type: 'Full Time',
-    salary: 80000
+    salary: 80000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     jobId: 3,
@@ -22,7 +25,8 @@ var jobs = [
     location: 'Nakuru',
     country: 'Kenya',
     type: 'Full Time',
-    salary: 180000
+    salary: 180000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     jobId: 4,
@@ -30,43 +34,42 @@ var jobs = [
     location: 'Mombasa',
     country: 'Kenya',
     type: 'Full Time',
-    salary: 70000
-  },
+    salary: 70000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
 ]
 const params = new URLSearchParams(window.location.search);
-        const keywords = params.get('keywords');
+const titleSearch = params.get('title');
 
-searchbtn = document.getElementById('search-button');
-searchbtn.addEventListener('click', function() {
-  var titleSearch = document.getElementById('search-input').value.trim().toString().toLowerCase();
-  var resultsContainer = document.getElementById('results-container');
-  resultsContainer.innerHTML = '';
+// document.getElementById('search-button').addEventListener('click', function() {
+//   var titleSearch = document.getElementById('search-input').value.trim().toString().toLowerCase();
+//   var resultsContainer = document.getElementById('results-container');
+//   resultsContainer.innerHTML = '';
 
-   // Filter jobs based on keywords
-   var filteredJobs = jobs.filter(function(job) {
-    return 
-        job.title.toLowerCase().includes(titleSearch) ||
-        job.company.toLowerCase().includes(titleSearch) ||
-        job.location.toLowerCase().includes(titleSearch) ||
-        job.description.toLowerCase().includes(titleSearch);
-});
+   // Filter jobs based on title
+const filteredJobs = jobs.filter(job =>
+
+    job.jobTitle.toLowerCase().includes(titleSearch.toLowerCase()) ||
+    job.type.toLowerCase().includes(titleSearch.toLowerCase()) ||
+    job.location.toLowerCase().includes(titleSearch.toLowerCase())
+
+)
 // Display filtered jobs
-filteredJobs.forEach(function(job) {
-  var jobElement = document.createElement('div');
-  jobElement.classList.add('job');
-  jobElement.innerHTML = `
-      <h3>${job.title}</h3>
-      <p><strong>Company:</strong> ${job.company}</p>
-      <p><strong>Location:</strong> ${job.location}</p>
-      <p>${job.description}</p>
-  `;
-  resultsContainer.appendChild(jobElement);
-});
+const resultsContainer = document.getElementById('results-container');
+        filteredJobs.forEach(job => {
+            const jobElement = document.createElement('div');
+            jobElement.innerHTML = `
+                <h3>${job.jobTitle}</h3>
+                <p><strong>Location:</strong> ${job.location}</p>
+                <p>${job.type}</p>
+                <p>${job.description}
+            `;
+            resultsContainer.appendChild(jobElement);
+        });
 
-if (filteredJobs.length === 0) {
-  resultsContainer.innerHTML = '<p>No jobs found</p>';
-}
-});
+        if (filteredJobs.length === 0) {
+            resultsContainer.innerHTML = '<p>No jobs found</p>';
+        }
 
 //  titleSearchInput.addEventListener('input', e =>{
 //   const searchValue = e.target.value.toLowerCase();
