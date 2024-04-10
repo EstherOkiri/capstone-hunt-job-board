@@ -427,12 +427,12 @@ section{
 
 
 /*media queries*/
-@media (max-width:991px){/*tablet*/
+@media (max-width:991px){
     html{
         font-size: 50%;
     }
 }
-@media (max-width:768px){/*tablet*/
+@media (max-width:768px){
 
     .category .cat-container{
         display: grid;
@@ -445,7 +445,7 @@ section{
         align-self: center;
     }
 }
-@media (max-width:480px){/*tablet*/
+@media (max-width:480px){
     html{
         font-size: 45%;
     }
