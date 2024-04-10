@@ -59,10 +59,10 @@ const resultsContainer = document.getElementById('results-container');
         filteredJobs.forEach(job => {
             const jobElement = document.createElement('div');
             jobElement.innerHTML = `
-                <h3>${job.jobTitle}</h3>
-                <p><strong>Location:</strong> ${job.location}</p>
-                <p>${job.type}</p>
-                <p>${job.description}
+                <h1>${job.jobTitle}</h1>
+                <h2><strong>Location:</strong> ${job.location}</h2>
+                <h3>${job.type}</h3>
+                <p>${job.description}</p>
             `;
             resultsContainer.appendChild(jobElement);
         });
@@ -70,11 +70,6 @@ const resultsContainer = document.getElementById('results-container');
         if (filteredJobs.length === 0) {
             resultsContainer.innerHTML = '<p>No jobs found</p>';
         }
-
-//  titleSearchInput.addEventListener('input', e =>{
-//   const searchValue = e.target.value.toLowerCase();
-//   return searchValue;
-//  } )
  
 
 

@@ -384,7 +384,9 @@ section{
     color: #49c5b755;
     text-decoration: underline;
 }
-
+.job-result{
+    margin-right: 1rem 0;
+}
 
 
 
@@ -431,24 +433,7 @@ section{
     }
 }
 @media (max-width:768px){/*tablet*/
-    #menuBtn{
-        display: inline-block;
-    }
-    .header .logo-section .navbar{
-        position: absolute;
-        top: 99%; left: 0; right: 0;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: .2s linear;
 
-    }
-    .header .logo-section .navbar a{
-        display: block;
-        padding: 1.5rem;
-    }
-   
-    .header .logo-section .navbar .active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
     .category .cat-container{
         display: grid;
         grid-template-columns: 1fr;
