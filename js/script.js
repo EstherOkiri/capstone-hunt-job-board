@@ -40,11 +40,7 @@ var jobs = [
 ]
 const params = new URLSearchParams(window.location.search);
 const titleSearch = params.get('title');
-
-// document.getElementById('search-button').addEventListener('click', function() {
-//   var titleSearch = document.getElementById('search-input').value.trim().toString().toLowerCase();
-//   var resultsContainer = document.getElementById('results-container');
-//   resultsContainer.innerHTML = '';
+const filterSearchInput = params.get('filter-search-input')
 
    // Filter jobs based on title
 const filteredJobs = jobs.filter(job =>
