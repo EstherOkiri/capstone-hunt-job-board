@@ -33,14 +33,10 @@
                 <input type="password" required class="input" name="name" placeholder="Type Your Password">
                 <input type="submit" value="Log in" name="submit" class="btn">
                 <p>Don't have an account ? <a href="./signUp.html">Sign Up</a></p>
-                <div id="g_id_onload"
-                    data-client_id="155339058051-jq93qpq8qel833d6jvojrkqgi504la05.apps.googleusercontent.com"
-                    data-callback="handleCredentialResponse">
-                </div>
-                <div class="g_id_signin" data-type="standard"></div>
-
-
-
+                <div class="input ">
+                    <button id="google-login-btn" class="google-button">
+                        <i class="fab fa-google"></i>Login with Google
+                    </button>
             </form>
 
         </section>
@@ -72,9 +68,40 @@
         <div class="copy"> &copy; copyright @2024 by <span style="font-weight: bold;">Esther Okiri</span> || all rights reserved!</div>
 
     </footer>
+
+    <script type="module">
+ 
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+       import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"
+       const firebaseConfig = {
+                 apiKey: "AIzaSyAZ2nlUul27Mlhu90sgACFMjxT8rkDgcM4",
+                 authDomain: "auth-ba53b.firebaseapp.com",
+                 projectId: "auth-ba53b",
+                 storageBucket: "auth-ba53b.appspot.com",
+                 messagingSenderId: "436703664089",
+                 appId: "1:436703664089:web:1d7f5263a161aa10fb6bc8"
+               };
+       
+       const app = initializeApp(firebaseConfig);
+       const auth = getAuth();
+       auth.languageCode = 'en';
+       const provider = new GoogleAuthProvider();
+       const googleLogin = document.getElementById("google-login-btn");
+       googleLogin.addEventListener("click", function () {
+         signInWithPopup(auth, provider)
+           .then((result) => {
+             const credential = GoogleAuthProvider.credentialFromResult(result);
+             const user = result.user;
+             console.log(user);
+             window.location.href = "./jobsLoggedIn.html"
+           }).catch((error) => {
+             const errorCode = error.code;
+             const errorMessage = error.message;
+           });
+       })
+             </script>
     
 
-    <!-- <script src="/js/script.js"></script> -->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
 </body>
 </html>
