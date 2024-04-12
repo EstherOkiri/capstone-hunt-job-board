@@ -252,13 +252,6 @@ section{
 .job-filter form .dropdown-container .dropdown .lists .items:hover{
     background-color: whitesmoke;
 }
-.job-filter form .dropdown-container .dropdown .lists:hover,
-.job-filter form .dropdown-container .dropdown:hover .lists,
-.job-filter form .dropdown-container .dropdown .output:focus + .lists,
-.job-filter form .dropdown-container .dropdown .output:focus-within + .lists{
-    transform: scaleY(1);
-    transition: 1s linear;
-}
 .job-details .job-info{
     background-color: whitesmoke;
     border-radius: .5rem;
@@ -278,6 +271,12 @@ section{
     margin: 1.5rem 0;
     border-radius: .5rem;
     padding: 2rem;
+}
+.job-details .job-info .basic-details p{
+    font-size: 2rem;
+}
+.job-details .job-info .basic-details ul{
+    font-size: 1.5rem;
 }
 
 /*contact us*/
@@ -387,15 +386,6 @@ section{
 .job-result{
     margin-right: 1rem 0;
 }
-
-
-
-
-
-
-
-
-
 
 /*footer*/
 .footer .grid{
