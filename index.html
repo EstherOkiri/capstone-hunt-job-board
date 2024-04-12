@@ -4,200 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Home</title>
+    <title>Log In</title>
 </head>
 <body>
+    
     <!--header section-->
     <header class="header">
         <section class=logo-section>
-            <div id="menuBtn"><img src="./images/burger-icon.png" alt="" id="menuBtn"></div>
-            <a href="/index.html"><img src="./images/logo.png" alt="logo" width="20px">Hunt</a>
+            <div id="menuBtn"><img src="/images/burger-icon.png" alt="" id="menuBtn"></div>
+            <a href="./index.html"><img src="./images/logo.png" alt="logo" width="20px">Hunt</a>
 
             <nav class="navbar">
-                <a href="index.html">Home</a>
-                <a href="./jobs.html">Jobs</a>
-                <a href="./contact.html">Contact Us</a>
-                <a href="./login.html">Log In</a>
+                <a href="./index.html">Home</a>
+                <a href="/jobs.html">Jobs</a>
+                <a href="/contact.html">Contact Us</a>
+                
             </nav>
         </section>
 
     </header>
-    <!--hero section-->
-    <div class="hero-container">
-        <section class="home">
-            <form action="" method="get">
-                <h3>Find your next job</h3>
-                <p>Job Title</p>
-                <input type="text" class="input" name="title" placeholder="job title" id="search-input">
-                <input type="submit" value="Search Job" class="btn" id="search-button">
+
+
+    <div class="account-form-container">
+        <section class="account-form">
+            <form action="" method="post">
+                <h3>Welcome Back!</h3>
+                <input type="text" required class="input" name="name" placeholder="Type Your Email">
+                <input type="password" required class="input" name="name" placeholder="Type Your Password">
+                <input type="submit" value="Log in" name="submit" class="btn">
+                <p>Don't have an account ? <a href="./signUp.html">Sign Up</a></p>
+                <div class="input ">
+                    <button id="google-login-btn" class="google-button">
+                        <i class="fab fa-google"></i>Login with Google
+                    </button>
             </form>
-                
 
-        </section>       
+        </section>
     </div>
-    <!--job category section-->
-    <section class="category">
-        <h1 class="heading"> Job Industry </h1>
-        <div class="cat-container">
-        <a href="#" class="box">
-            <div>
-                <img src="./images/development.png" alt="development">
-                <h3>Development</h3>
-                <span>2200 Jobs</span>
-            </div>
-        </a>
-        <a href="#" class="box">
-            <div>
-                <img src="./images/banking.png" alt="banking">
-                <h3>Banking, Finance & Insurance</h3>
-                <span>2800 Jobs</span>
-            </div>
-        </a>
-        <a href="#" class="box">
-            <div>
-                <img src="./images/media.png" alt="media">
-                <h3>Advertising, Media & Communications</h3>
-                <span>1800 Jobs</span>
-            </div>
-        </a>
-        <a href="#" class="box">
-            <div>
-                <img src="./images/agriculture.png" alt="">
-                <h3>Agriculture Fishing & Forestry</h3>
-                <span>3000 Jobs</span>
-            </div>
-        </a>
-        <a href="#" class="box">
-            <div>
-                <img src="./images/healthcare.png" alt="healthcare">
-                <h3>Healthcare</h3>
-                <span>1550 Jobs</span>
-            </div>
-        </a>
-        <a href="#" class="box">
-            <div>
-                <img src="./images/law.png" alt="law">
-                <h3>Law & Compliance</h3>
-                <span>1600 Jobs</span>
-            </div>
-        </a>
-    </div>
-
-    </section>
-
-    <!--job section-->
-    <h1 class="heading">Latest Jobs</h1>
-    <section class="jobs-container">
-        
-        <div class="box-container">
-            <div class="box">
-                <div class="company">
-                    <img src="./images/logo1.png" alt="logo1">
-                    <div>
-                        <h3>IT Info Sys Co.</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title" id="job-title" >Senior Web Developer</h3>
-                <p class="location"><span>Mombasa, Kenya</span></p>
-                <div class="tags">
-                    <p><span>10k - 25k </span></p>
-                    <p><span>Full time</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="./seniorWebDev.html" class="btn">View Details...</a>
-                    <button type="submit" name="save"><img src="./images/save.png" alt="save"></button>
-                </div>
-            </div>
-
-        </div>
-        <div class="box-container">
-            <div class="box">
-                <div class="company">
-                    <img src="./images/logo2.png" alt="logo2">
-                    <div>
-                        <h3>Nike</h3>
-                        <span>3 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title" id="job-title">Marketing Executive</h3>
-                <p class="location"><span>Nairobi, Kenya</span></p>
-                <div class="tags">
-                    <p><span>80k -100k </span></p>
-                    <p><span>Full time</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="./marketingExecutive.html" class="btn">View Details...</a>
-                    <button type="submit" name="save"><img src="./images/save.png" alt="save"></button>
-                </div>
-            </div>
-
-        </div>
-        <div class="box-container">
-            <div class="box">
-                <div class="company">
-                    <img src="./images/logo4.png" alt="logo4">
-                    <div>
-                        <h3>Sys Secure</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title" id="job-title">Cyber Security Expert</h3>
-                <p class="location"><span>Nakuru, Kenya</span></p>
-                <div class="tags">
-                    <p><span>180k - 225k </span></p>
-                    <p><span>Full time</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="./cyberSecurityExpert.html" class="btn">View Details...</a>
-                    <button type="submit" name="save"><img src="./images/save.png" alt="save"></button>
-                </div>
-            </div>
-
-        </div>
-        <div class="box-container">
-            <div class="box">
-                <div class="company">
-                    <img src="./images/logo5.png" alt="logo5">
-                    <div>
-                        <h3>Facility</h3>
-                        <span>2 days ago</span>
-                    </div>
-                </div>
-                <h3 class="job-title" id="job-title">Facilities Manager</h3>
-                <p class="location"><span>Mombasa, Kenya</span></p>
-                <div class="tags">
-                    <p><span>50k - 70k </span></p>
-                    <p><span>Full time</span></p>
-                </div>
-                <div class="flex-btn">
-                    <a href="./facilitiesManager.html" class="btn">View Details...</a>
-                    <button type="submit" name="save"><img src="./images/save.png" alt="save"></button>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div style="text-align: center; margin-top: 1rem;">
-            <a href="./jobs.html"></a>
-        </div>
-
-    </section>
+  
 
     <!--footer section-->
     <footer class="footer">
         <section class="grid">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="jobs.html">Jobs</a>
+                <a href="./index-logged.html">Home</a>
+                <a href="./jobsLoggedIn.html">Jobs</a>
                 <a href="contact.html">Contact Us</a>
             </div>
             <div class="box">
                 <h3>Extra Links</h3>
                 <a href="login.html">Log In</a>
-                <a href="signUp.html">Sign Up</a>
+                
             </div>
             <div class="box">
                 <h3>We are on Social Media</h3>
@@ -210,8 +68,40 @@
         <div class="copy"> &copy; copyright @2024 by <span style="font-weight: bold;">Esther Okiri</span> || all rights reserved!</div>
 
     </footer>
+
+    <script type="module">
+ 
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+       import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"
+       const firebaseConfig = {
+                 apiKey: "AIzaSyAZ2nlUul27Mlhu90sgACFMjxT8rkDgcM4",
+                 authDomain: "auth-ba53b.firebaseapp.com",
+                 projectId: "auth-ba53b",
+                 storageBucket: "auth-ba53b.appspot.com",
+                 messagingSenderId: "436703664089",
+                 appId: "1:436703664089:web:1d7f5263a161aa10fb6bc8"
+               };
+       
+       const app = initializeApp(firebaseConfig);
+       const auth = getAuth();
+       auth.languageCode = 'en';
+       const provider = new GoogleAuthProvider();
+       const googleLogin = document.getElementById("google-login-btn");
+       googleLogin.addEventListener("click", function () {
+         signInWithPopup(auth, provider)
+           .then((result) => {
+             const credential = GoogleAuthProvider.credentialFromResult(result);
+             const user = result.user;
+             console.log(user);
+             window.location.href = "./index-logged.html"
+           }).catch((error) => {
+             const errorCode = error.code;
+             const errorMessage = error.message;
+           });
+       })
+             </script>
     
 
-    <script src="/js/script.js"></script>
+    
 </body>
 </html>
