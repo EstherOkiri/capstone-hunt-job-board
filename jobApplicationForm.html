@@ -25,7 +25,7 @@
     <!--Form-->
     <div class="application-container">
         <h1 class="heading">Job Application Form</h1>
-        <form action="" method="post" id="jobApplicationForm">
+        <form action="" method="post" onsubmit="submitApplication()">
           <label for="fullname">Full Name</label><br>
           <input type="text" id="fullname" name="fullname" required><br><br>
       
@@ -46,7 +46,7 @@
       
           <input type="submit" value="Submit Application">
         </form>
-        <div id="successMessage" style="display: none; color: black; margin-top: 10px;">Application submitted successfully. We will contact you shortly.</div>
+        
       </div>
 
 

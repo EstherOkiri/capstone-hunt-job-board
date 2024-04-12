@@ -94,7 +94,14 @@ document.getElementById("search-jobs").addEventListener("submit", function(event
 //contact form-js
 function submitForm() {
 
- alert("Thank you for your contacting Hint. We have received your message and we'll get back to you.");
+ alert("Thank you for your contacting Hunt. We have received your message and we'll get back to you.");
+
+}
+
+//application submission form
+function submitApplication(){
+  
+  alert("Your application was submitted successfuly!");
 
 }
         
