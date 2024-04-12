@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Search Jobs</title>
+    <title>Home</title>
 </head>
 <body>
     <!--header section-->
@@ -14,36 +14,79 @@
             <a href="/index.html"><img src="./images/logo.png" alt="logo" width="20px">Hunt</a>
 
             <nav class="navbar">
-                <a href="./index.html">Home</a>
+                <a href="./#">Home</a>
                 <a href="./jobsLoggedIn.html">Jobs</a>
-                <a href="./contact.html">Contact Us</a>
                 <a href="./index.html">Log Out</a>
             </nav>
         </section>
 
     </header>
-    <!--job filter-->
-    <section class="job-filter">
-        <h1 class="heading">Filter Jobs</h1>
-        <form action="" method="post">
-            <div class="flex">
-                <div class="box">
-                    <p>Job Title<span>*</span></p>
-                    <input type="text" class="input" name="title" placeholder="job title, industry, company" >
+    <!--hero section-->
+    <div class="hero-container">
+        <section class="home">
+            <form action="" method="get">
+                <h3>Find your next job</h3>
+                <p>Job Title</p>
+                <input type="text" class="input" name="title" placeholder="job title" id="search-input">
+                <input type="submit" value="Search Job" class="btn" id="search-button">
+            </form>
+                
 
-                </div>
-                <div class="box">
-                    <p>Location<span>*</span></p>
-                    <input type="text" class="input" name="location" placeholder="town or county" >
-
-                </div>
+        </section>       
+    </div>
+    <!--job category section-->
+    <section class="category">
+        <h1 class="heading"> Job Industry </h1>
+        <div class="cat-container">
+        <a href="#" class="box">
+            <div>
+                <img src="./images/development.png" alt="development">
+                <h3>Development</h3>
+                <span>200 Jobs</span>
             </div>
-        </form>
+        </a>
+        <a href="#" class="box">
+            <div>
+                <img src="./images/banking.png" alt="banking">
+                <h3>Banking, Finance & Insurance</h3>
+                <span>200 Jobs</span>
+            </div>
+        </a>
+        <a href="#" class="box">
+            <div>
+                <img src="./images/media.png" alt="media">
+                <h3>Advertising, Media & Communications</h3>
+                <span>1800 Jobs</span>
+            </div>
+        </a>
+        <a href="#" class="box">
+            <div>
+                <img src="./images/agriculture.png" alt="">
+                <h3>Agriculture Fishing & Forestry</h3>
+                <span>3000 Jobs</span>
+            </div>
+        </a>
+        <a href="#" class="box">
+            <div>
+                <img src="./images/healthcare.png" alt="healthcare">
+                <h3>Healthcare</h3>
+                <span>1550 Jobs</span>
+            </div>
+        </a>
+        <a href="#" class="box">
+            <div>
+                <img src="./images/law.png" alt="law">
+                <h3>Law & Compliance</h3>
+                <span>1600 Jobs</span>
+            </div>
+        </a>
+    </div>
 
     </section>
-    <h1 class="heading">All Jobs</h1>
 
-    <section class="jobs-container" id="jobs-container">
+    <!--job section-->
+    <h1 class="heading">Latest Jobs</h1>
+    <section class="jobs-container">
         
         <div class="box-container">
             <div class="box">
@@ -54,14 +97,14 @@
                         <span>2 days ago</span>
                     </div>
                 </div>
-                <h3 class="job-title">Senior Web Developer</h3>
+                <h3 class="job-title" id="job-title" >Senior Web Developer</h3>
                 <p class="location"><span>Mombasa, Kenya</span></p>
                 <div class="tags">
-                    <p><span>10k - 25k </span></p>
+                    <p><span>100k - 250k </span></p>
                     <p><span>Full time</span></p>
                 </div>
                 <div class="flex-btn">
-                    <a href="./seniorWebDev.html" class="btn">View Details...</a>
+                    <a href="./seniorWebDev-logged.html" class="btn">View Details...</a>
                     <button type="submit" name="save"><img src="./images/save.png" alt="save"></button>
                 </div>
             </div>
@@ -76,7 +119,7 @@
                         <span>3 days ago</span>
                     </div>
                 </div>
-                <h3 class="job-title">Marketing Executive</h3>
+                <h3 class="job-title" id="job-title">Marketing Executive</h3>
                 <p class="location"><span>Nairobi, Kenya</span></p>
                 <div class="tags">
                     <p><span>80k -100k </span></p>
@@ -98,7 +141,7 @@
                         <span>2 days ago</span>
                     </div>
                 </div>
-                <h3 class="job-title">Cyber Security Expert</h3>
+                <h3 class="job-title" id="job-title">Cyber Security Expert</h3>
                 <p class="location"><span>Nakuru, Kenya</span></p>
                 <div class="tags">
                     <p><span>180k - 225k </span></p>
@@ -120,7 +163,7 @@
                         <span>2 days ago</span>
                     </div>
                 </div>
-                <h3 class="job-title">Facilities Manager</h3>
+                <h3 class="job-title" id="job-title">Facilities Manager</h3>
                 <p class="location"><span>Mombasa, Kenya</span></p>
                 <div class="tags">
                     <p><span>50k - 70k </span></p>
@@ -140,21 +183,20 @@
         </div>
 
     </section>
-  
 
     <!--footer section-->
     <footer class="footer">
         <section class="grid">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="./index.html">Home</a>
-                <a href="./jobs.html">Jobs</a>
-                <a href="./contact.html">Contact Us</a>
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="contact.html">Contact Us</a>
             </div>
             <div class="box">
                 <h3>Extra Links</h3>
-                <a href="./login.html">Log In</a>
-                <a href="./signUp.html">Sign Up</a>
+                <a href="login.html">Log In</a>
+                <a href="signUp.html">Sign Up</a>
             </div>
             <div class="box">
                 <h3>We are on Social Media</h3>
@@ -169,6 +211,6 @@
     </footer>
     
 
-    <script src="./js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
