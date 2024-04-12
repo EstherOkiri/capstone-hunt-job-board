@@ -338,6 +338,26 @@ section{
 .job-result{
     margin-right: 1rem 0;
 }
+/*application*/
+.application-container form{
+    margin-top: 2rem;
+    background-color: white;
+    border: #49c5b755 solid;
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+.application-container form label{
+
+    font-size: 1.6rem;
+    padding:  .5rem 2rem;
+
+
+}
 
 /*footer*/
 .footer .grid{
