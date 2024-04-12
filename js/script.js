@@ -65,7 +65,8 @@ const jobs = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
 ]
-//get form
+document.addEventListener('DOMContentLoaded', function(){
+  //get form
 document.getElementById("search-jobs").addEventListener("submit", function(event){
   event.preventDefault();
   //get values
@@ -84,20 +85,18 @@ document.getElementById("search-jobs").addEventListener("submit", function(event
         <p> Location: ${jobs.location}, ${jobs.country}</p>
         `;
         resultContainer.appendChild(resultElement);
+        
       }
     }
 })
+})
 
+//contact form-js
+function submitForm() {
 
+ alert("Thank you for your contacting Hint. We have received your message and we'll get back to you.");
 
-
-        function submitForm(event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          // Display a message to the DOM
-          var messageDisplay = document.getElementById("messageDisplay");
-          messageDisplay.textContent = "Thank you for your message. We have received it and will get back to you shortly.";
-      }
+}
         
 
 

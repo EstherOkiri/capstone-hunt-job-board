@@ -39,7 +39,7 @@
                 <a href="mailto:abcdefg23@gmail.com">abcdefg23@gmail.com</a>
             </div>
         </div>
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="submitForm()">
             <div class="flex">
                 <div class="box">
                     <p>Name <span>*</span></p>
@@ -63,8 +63,9 @@
             </div>
             <p>Message or Question <span>*</span></p>
             <textarea name="message" class ="input" required placeholder="Type your message or question here..." cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" name="send">
+            <input type="submit" value="send message" name="send" id="send-message">
         </form>
+        
 
     </section>
   
