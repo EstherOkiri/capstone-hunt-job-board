@@ -18,7 +18,7 @@
                 <a href="./index.html">Home</a>
                 <a href="/jobs.html">Jobs</a>
                 <a href="/contact.html">Contact Us</a>
-                <a href="/login.html">Log In</a>
+                
             </nav>
         </section>
 
@@ -48,8 +48,8 @@
         <section class="grid">
             <div class="box">
                 <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="jobs.html">Jobs</a>
+                <a href="./index-logged.html">Home</a>
+                <a href="./jobsLoggedIn.html">Jobs</a>
                 <a href="contact.html">Contact Us</a>
             </div>
             <div class="box">
@@ -93,7 +93,7 @@
              const credential = GoogleAuthProvider.credentialFromResult(result);
              const user = result.user;
              console.log(user);
-             window.location.href = "./jobsLoggedIn.html"
+             window.location.href = "./index-logged.html"
            }).catch((error) => {
              const errorCode = error.code;
              const errorMessage = error.message;
