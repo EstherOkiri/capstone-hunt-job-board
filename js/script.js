@@ -81,7 +81,7 @@ document.getElementById("search-jobs").addEventListener("submit", function(event
         resultElement.classList.add('search-result');
         resultElement.innerHTML = `
         <h1> ${jobs.jobTitle}</h1>
-        <p> Location: ${jobs.location}, ${result.country}</p>
+        <p> Location: ${jobs.location}, ${jobs.country}</p>
         `;
         resultContainer.appendChild(resultElement);
       }
