@@ -1,5 +1,5 @@
 // Search
-var jobs = [
+const jobs = [
   {
     jobId: 1,
     jobTitle: 'Senior Web Developer',
@@ -36,36 +36,68 @@ var jobs = [
     type: 'Full Time',
     salary: 70000,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    jobId: 5,
+    jobTitle: 'Lawyer',
+    location: 'Eldoret',
+    country: 'Kenya',
+    type: 'Full Time',
+    salary: 70000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    jobId: 9,
+    jobTitle: 'Head of Operations',
+    location: 'Nairobi',
+    country: 'Kenya',
+    type: 'Full Time',
+    salary: 100000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    jobId: 10,
+    jobTitle: 'Intern',
+    location: 'Eldoret',
+    country: 'Kenya',
+    type: 'Part Time',
+    salary: 40000,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
 ]
-        const params = new URLSearchParams(window.location.search);
-        const title = params.get('title');
+//get form
+document.getElementById("search-jobs").addEventListener("submit", function(event){
+  event.preventDefault();
+  //get values
+  const resultContainer = document.getElementById('results-container');
+    const searchInput = document.getElementById("title-search-input").value.toLowerCase();
+    // console.log(searchInput);
+    
+    for (i = 0; i < jobs.length; i++){
+      if(jobs[i].jobTitle.toLocaleLowerCase().includes(searchInput)){
+        const result = jobs[i];
+        console.log(result);
+        const resultElement = document.createElement('div');
+        resultElement.classList.add('search-result');
+        resultElement.innerHTML = `
+        <h1> ${jobs.jobTitle}</h1>
+        <p> Location: ${jobs.location}, ${result.country}</p>
+        `;
+        resultContainer.appendChild(resultElement);
+      }
+    }
+})
 
- 
-        // Filter jobs based on keywords
-        const filteredJobs = jobs.filter(job => 
-            job.jobTitle.toLowerCase().includes(title.toLowerCase())
-        );
 
-        // Display filtered jobs
-        const resultsContainer = document.getElementById('results-container');
-        filteredJobs.forEach(job => {
-            const jobElement = document.createElement('div');
-            jobElement.innerHTML = `
-                <h3>${job.jobTitle}</h3>
-                <p><strong>Location:</strong> ${job.location}</p>
-                <p><strong>Location:</strong> ${job.country}</p>
-                <p>${job.type}</p>
-                <p>${job.description}</p>
-                <p><strong>Location:</strong> ${job.salary}</p>
-            `;
-            resultsContainer.appendChild(jobElement);
-        });
 
-        if (filteredJobs.length === 0) {
-            resultsContainer.innerHTML = '<p>No jobs found</p>';
-        }
- 
 
+        function submitForm(event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Display a message to the DOM
+          var messageDisplay = document.getElementById("messageDisplay");
+          messageDisplay.textContent = "Thank you for your message. We have received it and will get back to you shortly.";
+      }
+        
 
 
